@@ -1,0 +1,69 @@
+<div class="page-container">
+  <nz-card class="glass-card">
+    <div class="quiz-header">
+      <h2>Режимы тренировок</h2>
+      <p>Выберите тип упражнения для практики</p>
+    </div>
+
+    <div class="quiz-grid">
+      <nz-card class="glass-card quiz-card" nzHoverable>
+        <div class="quiz-item">
+          <div class="quiz-icon">🎯</div>
+          <div class="quiz-content">
+            <h3>Множественный выбор</h3>
+            <p>Выберите правильный перевод из предложенных вариантов</p>
+          </div>
+          <div class="quiz-badge">Скоро</div>
+        </div>
+      </nz-card>
+
+      <nz-card class="glass-card quiz-card" nzHoverable appWorkInProgress>
+        <div class="quiz-item">
+          <div class="quiz-icon">✏️</div>
+          <div class="quiz-content">
+            <h3>Написание</h3>
+            <p>Введите правильный перевод слова</p>
+          </div>
+          <div class="quiz-badge">Скоро</div>
+        </div>
+      </nz-card>
+
+      <nz-card class="glass-card quiz-card" nzHoverable appWorkInProgress>
+        <div class="quiz-item">
+          <div class="quiz-icon">🎮</div>
+          <div class="quiz-content">
+            <h3>Викторина</h3>
+            <p>Быстрые вопросы на время</p>
+          </div>
+          <div class="quiz-badge">Скоро</div>
+        </div>
+      </nz-card>
+
+      <nz-card class="glass-card quiz-card" nzHoverable appWorkInProgress>
+        <div class="quiz-item">
+          <div class="quiz-icon">🔊</div>
+          <div class="quiz-content">
+            <h3>Аудирование</h3>
+            <p>Слушайте и выбирайте правильный вариант</p>
+          </div>
+          <div class="quiz-badge">Скоро</div>
+        </div>
+      </nz-card>
+    </div>
+  </nz-card>
+
+  <nz-card class="glass-card progress-card" appWorkInProgress>
+    <div class="progress-header">
+      <h3>Ваш прогресс</h3>
+      <span>0%</span>
+    </div>
+    <nz-progress
+      [nzPercent]="0"
+      nzStrokeColor="var(--honey-primary)"
+      nzSize="small"
+      [nzShowInfo]="false"
+    >
+    </nz-progress>
+    <p class="progress-text">Начните изучать слова чтобы увидеть прогресс</p>
+  </nz-card>
+</div>

@@ -1,0 +1,141 @@
+<div class="page-container">
+  <!-- Learner info -->
+  <nz-card class="glass-card profile-card">
+    <div class="profile-header">
+      <div class="avatar-section">
+        <nz-avatar
+          nzSize="large"
+          nzSrc="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=200&h=200&fit=crop&crop=face"
+          class="profile-avatar"
+        >
+        </nz-avatar>
+        <div class="level-badge">Lvl 7</div>
+      </div>
+
+      <div class="profile-info">
+        <h1>Максим Ученик</h1>
+        <p class="profile-bio">Изучаю английский 3 месяца • 12 лет</p>
+
+        <div class="xp-progress">
+          <div class="xp-info">
+            <span>Опыт: 1250/2000 XP</span>
+            <span>62%</span>
+          </div>
+          <nz-progress
+            [nzPercent]="62"
+            nzStrokeColor="var(--honey-primary)"
+            nzSize="small"
+            [nzShowInfo]="false"
+          >
+          </nz-progress>
+        </div>
+
+        <div class="profile-stats">
+          <div class="stat">
+            <div class="stat-number">87</div>
+            <div class="stat-label">Слова изучено</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">15</div>
+            <div class="stat-label">Дней подряд</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">92%</div>
+            <div class="stat-label">Точность</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nz-card>
+
+  <!-- Progress -->
+  <div class="stats-grid">
+    <nz-card class="glass-card stat-card" appWorkInProgress>
+      <div class="stat-header">
+        <h3>🏆 Текущая цель</h3>
+        <span class="goal-progress">3/5 дней</span>
+      </div>
+      <nz-progress [nzPercent]="60" nzStrokeColor="var(--honey-primary)" nzSize="small">
+      </nz-progress>
+      <p class="goal-text">Заниматься 5 дней подряд</p>
+      <div class="reward">Награда: +50 XP</div>
+    </nz-card>
+
+    <nz-card class="glass-card stat-card" appWorkInProgress>
+      <div class="stat-header">
+        <h3>⚡ Активность</h3>
+        <span class="streak-days">15 дней</span>
+      </div>
+      <div class="streak-info">
+        <div class="fire-icon">🔥</div>
+        <div class="streak-text">Текущая серия: 15 дней подряд!</div>
+      </div>
+      <p class="streak-subtext">Не пропускайте занятия чтобы сохранить серию</p>
+    </nz-card>
+  </div>
+
+  <!-- Achievements -->
+  <nz-card class="glass-card achievements-card" appWorkInProgress>
+    <h3>🎯 Мои достижения</h3>
+    <div class="achievements-grid">
+      <div class="achievement earned">
+        <div class="achievement-icon">📚</div>
+        <div class="achievement-info">
+          <div class="achievement-title">Первые слова</div>
+          <div class="achievement-desc">Выучить 10 слов</div>
+        </div>
+        <div class="achievement-date">2 дня назад</div>
+      </div>
+
+      <div class="achievement earned">
+        <div class="achievement-icon">🔥</div>
+        <div class="achievement-info">
+          <div class="achievement-title">Неделя силы</div>
+          <div class="achievement-desc">7 дней подряд</div>
+        </div>
+        <div class="achievement-date">Вчера</div>
+      </div>
+
+      <div class="achievement locked">
+        <div class="achievement-icon">⭐</div>
+        <div class="achievement-info">
+          <div class="achievement-title">Месяц обучения</div>
+          <div class="achievement-desc">30 дней подряд</div>
+        </div>
+        <div class="achievement-progress">15/30 дней</div>
+      </div>
+
+      <div class="achievement locked">
+        <div class="achievement-icon">🏆</div>
+        <div class="achievement-info">
+          <div class="achievement-title">Словарный запас</div>
+          <div class="achievement-desc">100 слов изучено</div>
+        </div>
+        <div class="achievement-progress">87/100 слов</div>
+      </div>
+    </div>
+  </nz-card>
+
+  <!-- Learning statistics -->
+  <nz-card class="glass-card learning-card" appWorkInProgress>
+    <h3>📊 Статистика обучения</h3>
+    <div class="learning-stats">
+      <div class="learning-stat">
+        <div class="stat-value">24h</div>
+        <div class="stat-label">Общее время</div>
+      </div>
+      <div class="learning-stat">
+        <div class="stat-value">87</div>
+        <div class="stat-label">Слов изучено</div>
+      </div>
+      <div class="learning-stat">
+        <div class="stat-value">92%</div>
+        <div class="stat-label">Точность</div>
+      </div>
+      <div class="learning-stat">
+        <div class="stat-value">15</div>
+        <div class="stat-label">Дней подряд</div>
+      </div>
+    </div>
+  </nz-card>
+</div>

@@ -7,21 +7,18 @@ export const routes: Routes = [
     component: Layout,
     children: [
       { path: '', redirectTo: 'dictionary', pathMatch: 'full' },
-      //   {
-      //     path: 'dictionary',
-      //     loadComponent: () => import('./pages/dictionary/dictionary.component')
-      //       .then(m => m.DictionaryComponent)
-      //   },
-      //   {
-      //     path: 'quiz',
-      //     loadComponent: () => import('./pages/quiz/quiz.component')
-      //       .then(m => m.QuizComponent)
-      //   },
-      //   {
-      //     path: 'profile',
-      //     loadComponent: () => import('./pages/profile/profile.component')
-      //       .then(m => m.ProfileComponent)
-      //   }
+      {
+        path: 'dictionary',
+        loadComponent: () => import('./pages/dictionary/dictionary').then((m) => m.Dictionary),
+      },
+      {
+        path: 'quiz',
+        loadComponent: () => import('./pages/quiz/quiz').then((m) => m.Quiz),
+      },
+      {
+        path: 'profile',
+        loadComponent: () => import('./pages/profile/profile').then((m) => m.Profile),
+      },
     ],
   },
 ];
