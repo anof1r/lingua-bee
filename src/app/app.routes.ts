@@ -1,12 +1,13 @@
 import { Routes } from '@angular/router';
 import { Layout } from './layout/layout/layout';
+import { Home } from './pages/home/home';
 
 export const routes: Routes = [
+  { path: '', component: Home },
   {
     path: '',
     component: Layout,
     children: [
-      { path: '', redirectTo: 'dictionary', pathMatch: 'full' },
       {
         path: 'dictionary',
         loadComponent: () => import('./pages/dictionary/dictionary').then((m) => m.Dictionary),
