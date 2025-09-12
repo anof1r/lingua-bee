@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzAvatarModule } from 'ng-zorro-antd/avatar';
-import { NzDividerModule } from 'ng-zorro-antd/divider';
-import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
-import { NzProgressModule } from 'ng-zorro-antd/progress';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzProgressModule } from 'ng-zorro-antd/progress';
 import { WorkInProgressDirective } from '../../shared/directives/work-in-progress.directive';
 
 @Component({

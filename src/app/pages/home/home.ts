@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { NzCardModule } from 'ng-zorro-antd/card';
+import { RouterLink } from '@angular/router';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzIconModule } from 'ng-zorro-antd/icon';
-import { RouterOutlet, RouterLink } from '@angular/router';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { AuthModalService } from '../../shared/components/auth-modal/auth-modal.service';
 
 @Component({
   selector: 'app-home',
@@ -13,10 +14,13 @@ import { RouterOutlet, RouterLink } from '@angular/router';
   styleUrls: ['./home.scss'],
 })
 export class Home {
-  scrollToFeatures() {
-    const featuresSection = document.querySelector('.features-section');
-    if (featuresSection) {
-      featuresSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  constructor(private authModalService: AuthModalService) {}
+
+  protected openAuthModal() {
+    this.authModalService.openAuthModal().subscribe((result) => {
+      if (result) {
+        console.log('Auth result:', result);
+      }
+    });
   }
 }

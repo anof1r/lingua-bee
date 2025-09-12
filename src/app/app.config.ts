@@ -3,10 +3,12 @@ import {
   provideBrowserGlobalErrorListeners,
   provideZonelessChangeDetection,
 } from '@angular/core';
+import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideRouter } from '@angular/router';
 import { BookOutline, QuestionCircleOutline, UserOutline } from '@ant-design/icons-angular/icons';
-import { routes } from './app.routes';
 import { provideNzIcons } from 'ng-zorro-antd/icon';
+import { NzModalService } from 'ng-zorro-antd/modal';
+import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,5 +16,7 @@ export const appConfig: ApplicationConfig = {
     provideZonelessChangeDetection(),
     provideRouter(routes),
     provideNzIcons([BookOutline, QuestionCircleOutline, UserOutline]),
+    NzModalService,
+    provideAnimations(),
   ],
 };
