@@ -1,0 +1,38 @@
+<nz-layout class="layout">
+  <!-- Header -->
+  <nz-header class="header">
+    <div class="header-content">
+      <span nz-typography class="logo" routerLink="/">
+        <span class="logo-icon">🐝</span>
+        LinguaBee
+      </span>
+
+      <ul nz-menu nzMode="horizontal" [nzTheme]="'dark'">
+        <li nz-menu-item routerLink="/dictionary" routerLinkActive="active">
+          <span nz-icon nzType="book" nzTheme="outline"></span>
+          Словарь
+        </li>
+        <li nz-menu-item routerLink="/quiz" routerLinkActive="active">
+          <span nz-icon nzType="question-circle" nzTheme="outline"></span>
+          Квиз
+        </li>
+        <li nz-menu-item routerLink="/profile" routerLinkActive="active">
+          <span nz-icon nzType="user" nzTheme="outline"></span>
+          Профиль
+        </li>
+      </ul>
+    </div>
+  </nz-header>
+
+  <!-- Content -->
+  <nz-content class="content">
+    <div class="content-container">
+      <router-outlet></router-outlet>
+    </div>
+  </nz-content>
+
+  <!-- Footer -->
+  <nz-footer class="footer">
+    LinguaBee © Anof1r Denis ™ 2024 - Сделано с ❤️ для изучения языков1s
+  </nz-footer>
+</nz-layout>
