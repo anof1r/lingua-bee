@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
-import { Layout } from './layout/layout/layout';
+import { LayoutComponent } from './layout/layout';
 import { Home } from './pages/home/home';
 
 export const routes: Routes = [
   { path: '', component: Home },
   {
     path: '',
-    component: Layout,
+    component: LayoutComponent,
     children: [
       {
         path: 'dictionary',

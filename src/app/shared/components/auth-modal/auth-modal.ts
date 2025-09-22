@@ -23,7 +23,7 @@ import { NzModalModule, NzModalRef } from 'ng-zorro-antd/modal';
   templateUrl: './auth-modal.html',
   styleUrls: ['./auth-modal.scss'],
 })
-export class AuthModal {
+export class AuthModalComponent {
   isLoginMode: boolean = true;
   isLoading: boolean = false;
 
@@ -43,7 +43,6 @@ export class AuthModal {
 
   constructor(private modalRef: NzModalRef, private message: NzMessageService) {}
 
-  // Переключение между логином и регистрацией
   toggleMode() {
     this.isLoginMode = !this.isLoginMode;
   }
@@ -51,7 +50,6 @@ export class AuthModal {
   onLogin() {
     this.isLoading = true;
 
-    // Заглушка для демонстрации
     setTimeout(() => {
       this.isLoading = false;
       this.message.success('Вход выполнен успешно!');
@@ -59,7 +57,6 @@ export class AuthModal {
     }, 1500);
   }
 
-  // Регистрация
   onRegister() {
     if (this.registerData.password !== this.registerData.confirmPassword) {
       this.message.error('Пароли не совпадают');
@@ -73,7 +70,6 @@ export class AuthModal {
 
     this.isLoading = true;
 
-    // Заглушка для демонстрации
     setTimeout(() => {
       this.isLoading = false;
       this.message.success('Регистрация прошла успешно!');

@@ -24,4 +24,4 @@ import { NzTypographyModule } from 'ng-zorro-antd/typography';
   templateUrl: './layout.html',
   styleUrls: ['./layout.scss'],
 })
-export class Layout {}
+export class LayoutComponent {}

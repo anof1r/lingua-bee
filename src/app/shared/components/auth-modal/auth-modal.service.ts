@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { NzModalService } from 'ng-zorro-antd/modal';
-import { AuthModal } from './auth-modal';
+import { AuthModalComponent } from './auth-modal';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +10,7 @@ export class AuthModalService {
 
   openAuthModal() {
     const modalRef = this.modalService.create({
-      nzContent: AuthModal,
+      nzContent: AuthModalComponent,
       nzFooter: null,
       nzClosable: false,
       nzMaskClosable: true,

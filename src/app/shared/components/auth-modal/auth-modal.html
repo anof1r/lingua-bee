@@ -1,5 +1,4 @@
 <div class="auth-modal">
-  <!-- Заголовок -->
   <div class="modal-header">
     <h2>{{ isLoginMode ? 'Вход в аккаунт' : 'Создание аккаунта' }}</h2>
     <button nz-button nzType="text" nzShape="circle" (click)="close()">
@@ -7,8 +6,8 @@
     </button>
   </div>
 
-  <!-- Форма логина -->
-  <form *ngIf="isLoginMode" (ngSubmit)="onLogin()" class="auth-form">
+  @if(isLoginMode) {
+  <form (ngSubmit)="onLogin()" class="auth-form">
     <div class="form-group">
       <nz-form-item>
         <nz-form-label>Email</nz-form-label>
@@ -50,9 +49,8 @@
       Войти
     </button>
   </form>
-
-  <!-- Форма регистрации -->
-  <form *ngIf="!isLoginMode" (ngSubmit)="onRegister()" class="auth-form">
+  } @if(!isLoginMode) {
+  <form (ngSubmit)="onRegister()" class="auth-form">
     <div class="form-group">
       <nz-form-item>
         <nz-form-label>Имя</nz-form-label>
@@ -127,8 +125,7 @@
       Зарегистрироваться
     </button>
   </form>
-
-  <!-- Переключение между формами -->
+  }
   <div class="auth-switch">
     <p>
       {{ isLoginMode ? 'Ещё нет аккаунта?' : 'Уже есть аккаунт?' }}
@@ -138,7 +135,6 @@
     </p>
   </div>
 
-  <!-- Социальные сети (опционально) -->
   <div class="social-auth">
     <div class="divider">
       <span>или войти через</span>
