@@ -676,7 +676,7 @@
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .floating-elements {
-    display: none;
+    display: none; /* Hidden on mobile for cleaner experience */
   }
 
   .word-bubbles {
