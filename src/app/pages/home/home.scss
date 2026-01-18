@@ -193,6 +193,15 @@
   .bee-icon {
     font-size: 80px;
     filter: drop-shadow(0 4px 20px rgba(99, 102, 241, 0.2));
+    transition: filter 0.3s ease;
+  }
+
+  .bee-sparkle {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 20px;
+    animation: sparkle 2.5s ease-in-out infinite;
   }
 }
 
@@ -537,27 +546,6 @@
   50% {
     transform: translateY(-25px) rotate(10deg);
     opacity: 0.6;
-  }
-}
-
-/* Bee animation */
-.bee-static {
-  position: relative;
-  z-index: 2;
-  animation: float 4s ease-in-out infinite;
-
-  .bee-icon {
-    font-size: 80px;
-    filter: drop-shadow(0 4px 20px rgba(99, 102, 241, 0.2));
-    transition: filter 0.3s ease;
-  }
-
-  .bee-sparkle {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    font-size: 20px;
-    animation: sparkle 2.5s ease-in-out infinite;
   }
 }
 
